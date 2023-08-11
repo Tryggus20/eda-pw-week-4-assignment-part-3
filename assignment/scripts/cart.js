@@ -11,9 +11,6 @@ function addItem( nameOfItem ) {
 }// end of addItem
 console.log(basket);
 
-console.log(`Basket is ${basket}`);
-console.log('Adding apples (expect true)', addItem('apples'));
-console.log(`Basket is now ${basket}`);
 
 
 function listItems(basket){
@@ -37,9 +34,12 @@ function isFull() {
     if (basket.length < maxItems ){
         return false;
     }// end of if
-    return true;
+    else {
+        return true;
+    } //end of else
 }// end of isFull
-
+console.log('Is the basket full?', isFull());
+console.log('Adding items (expect true)', addItem('apples'), addItem('oranges'), isFull(basket));
 
 
 
