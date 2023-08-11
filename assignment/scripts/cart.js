@@ -48,9 +48,17 @@ console.log('Is the basket full?', isFull());
 
 //stretch array:
 
-function removeItem() {
-
-    
+function removeItem(itemToRemove) {
+    const itemIndex = basket.indexOf(itemToRemove);
+    if (itemIndex !== -1){  //glad I had used ! in a prev stretch goal.
+        basket.splice(itemIndex, 1);
+        console.log(itemToRemove)
+        return true, itemToRemove; //this part had me stuck for a bit. just had to add itemToRemove.
+    }// end of if
+    else {
+        console.log(itemToRemove, 'was not found in the basket');
+        return null;
+    }//end of else
 }// end removeItem
 
 
