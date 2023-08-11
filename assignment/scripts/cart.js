@@ -6,8 +6,14 @@ console.log(basket);
 
 function addItem( nameOfItem ) {
     console.log('Adding ',nameOfItem);
+    if (!isFull()){
     basket.push( nameOfItem );
-    return true
+    return true;
+    }//end of if
+    else {
+        console.log('The basket is full and cannot add', nameOfItem);
+        return false
+    }// end of else
 }// end of addItem
 console.log(basket);
 
@@ -39,7 +45,13 @@ function isFull() {
     } //end of else
 }// end of isFull
 console.log('Is the basket full?', isFull());
-console.log('Adding items (expect true)', addItem('apples'), addItem('oranges'), isFull(basket));
+
+//stretch array:
+
+function removeItem() {
+
+    
+}// end removeItem
 
 
 
