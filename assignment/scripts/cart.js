@@ -31,6 +31,16 @@ function empty(basket) {
 }// end of empty
 console.log('now our basket is empty', empty(basket));
 
+// stretch goals: 
+const maxItems = 5
+function isFull() {
+    if (basket.length < maxItems ){
+        return false;
+    }// end of if
+    return true;
+}// end of isFull
+
+
 
 
 
